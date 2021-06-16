@@ -18,7 +18,7 @@ description: "This book contains the tutorials for STA 326 2.0/ ASP 454 2.0 Prog
 
 ## Exercise
 
-1. Create a new project in the RStudio IDE. Name your project as "sta326".
+1. Create a new project in the RStudio IDE. Name your project as `sta326`.
 
 2. Select a suitable theme for your RStudio IDE's user interface. 
 
@@ -28,13 +28,13 @@ description: "This book contains the tutorials for STA 326 2.0/ ASP 454 2.0 Prog
 
 ![](img/globaloptions.png)
 
-4. Change the RStudio pane layout according to needs.
+4. Change the RStudio pane layout according to your needs.
 
     Help: Tools > Global options > Pane layout and fix it.
 
 5. Create a new folder called `weeek1` inside your main  R project.
 
-6. Open a new script file and save it as week1_exercise.R inside the `week1` folder created in the third step.
+6. Open a new script file and save it as `week1_exercise.R` inside the `week1` folder created in the third step.
 
 7. Go to Exercise 2 and write all codes on the R script `week1_exercise.R`
 
