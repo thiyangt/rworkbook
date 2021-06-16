@@ -1,0 +1,14 @@
+fig:nice-fig
+tab:nice-tab
+r-and-r-studio
+intro
+matrix-array-data-frame-list
+methods
+functions-in-r
+writing-functions-in-r
+lecture-slides
+creating-vectors
+object-classes-and-type-of-objects
+subsetting-of-vectors
+filtering-vectors-based-on-conditions
+modify-a-vector

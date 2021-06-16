@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Exercise 2 Vectors | Programming and Data Analysis with R</title>
+  <meta name="description" content="This book contains the tutorials for STA 326 2.0/ ASP 454 2.0 Programming and Data Analysis with R." />
+  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Exercise 2 Vectors | Programming and Data Analysis with R" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="This book contains the tutorials for STA 326 2.0/ ASP 454 2.0 Programming and Data Analysis with R." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Exercise 2 Vectors | Programming and Data Analysis with R" />
+  
+  <meta name="twitter:description" content="This book contains the tutorials for STA 326 2.0/ ASP 454 2.0 Programming and Data Analysis with R." />
+  
+
+<meta name="author" content="Thiyanga S. Talagala" />
+
+
+<meta name="date" content="2021-06-16" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="index.html"/>
+<link rel="next" href="matrix-array-data-frame-list.html"/>
+<script src="libs/header-attrs-2.8/header-attrs.js"></script>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Programming and Data Analysis with R</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> R and R Studio</a></li>
+<li class="chapter" data-level="2" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>2</b> Vectors</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="intro.html"><a href="intro.html#lecture-slides"><i class="fa fa-check"></i><b>2.1</b> Lecture slides</a></li>
+<li class="chapter" data-level="2.2" data-path="intro.html"><a href="intro.html#creating-vectors"><i class="fa fa-check"></i><b>2.2</b> Creating vectors</a></li>
+<li class="chapter" data-level="2.3" data-path="intro.html"><a href="intro.html#object-classes-and-type-of-objects"><i class="fa fa-check"></i><b>2.3</b> Object classes and type of objects</a></li>
+<li class="chapter" data-level="2.4" data-path="intro.html"><a href="intro.html#subsetting-of-vectors"><i class="fa fa-check"></i><b>2.4</b> Subsetting of vectors</a></li>
+<li class="chapter" data-level="2.5" data-path="intro.html"><a href="intro.html#filtering-vectors-based-on-conditions"><i class="fa fa-check"></i><b>2.5</b> Filtering vectors based on conditions</a></li>
+<li class="chapter" data-level="2.6" data-path="intro.html"><a href="intro.html#modify-a-vector"><i class="fa fa-check"></i><b>2.6</b> Modify a vector</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="matrix-array-data-frame-list.html"><a href="matrix-array-data-frame-list.html"><i class="fa fa-check"></i><b>3</b> Matrix, Array, Data Frame, List</a></li>
+<li class="chapter" data-level="4" data-path="methods.html"><a href="methods.html"><i class="fa fa-check"></i><b>4</b> Methods</a></li>
+<li class="chapter" data-level="5" data-path="functions-in-r.html"><a href="functions-in-r.html"><i class="fa fa-check"></i><b>5</b> Functions in R</a></li>
+<li class="chapter" data-level="6" data-path="writing-functions-in-r.html"><a href="writing-functions-in-r.html"><i class="fa fa-check"></i><b>6</b> Writing Functions in R</a></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Programming and Data Analysis with R</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="intro" class="section level1" number="2">
+<h1><span class="header-section-number">Exercise 2</span> Vectors</h1>
+<div id="lecture-slides" class="section level2" number="2.1">
+<h2><span class="header-section-number">2.1</span> Lecture slides</h2>
+<iframe seamless width="500%" height="500%" frameborde="0" src="https://hellor.netlify.app/2021/week1/l12021.html#1">
+</iframe>
+</div>
+<div id="creating-vectors" class="section level2" number="2.2">
+<h2><span class="header-section-number">2.2</span> Creating vectors</h2>
+<ol style="list-style-type: decimal">
+<li><p>Write R codes to create following vectors</p>
+<ol style="list-style-type: lower-alpha">
+<li><p>5, 12, 32, 50, 100000</p></li>
+<li><p>1, 2, 3, …, 100.</p></li>
+<li><p>2, 4, 6, 8, …, 100.</p></li>
+<li><p>vector (3, 3, 3, . . . 3, 6, 6, . . . 6, 9, 9, 9, . . . 9), where there are 10 occurrences of 3, 20 occurrences of 6 and 30 occurrences of 9.</p></li>
+</ol></li>
+<li><p>Generate a sequence using the code <code>seq(from=1, to=10, by=1)</code>. What other ways can you generate the same sequence?</p></li>
+<li><p>Using the function <code>rep()</code> , create the below sequence <code>1, 2, 3, 4, 1, 2, 3, 4, 1, 2, 3, 4</code></p></li>
+<li><p>Create a vector that shows the square root the integers from 1 to 100.</p></li>
+<li><p>Create a vector with elements from 1 to 100 incrementing by 0.4. Your output should look like the sample output given below.</p></li>
+</ol>
+<pre><code>  [1]  1.0  1.4  1.8  2.2  2.6  3.0  3.4  3.8  4.2  4.6  5.0  5.4  5.8  6.2  6.6
+ [16]  7.0  7.4  7.8  8.2  8.6  9.0  9.4  9.8 10.2 10.6 11.0 11.4 11.8 12.2 12.6
+ [31] 13.0 13.4 13.8 14.2 14.6 15.0 15.4 15.8 16.2 16.6 17.0 17.4 17.8 18.2 18.6
+ [46] 19.0 19.4 19.8 20.2 20.6 21.0 21.4 21.8 22.2 22.6 23.0 23.4 23.8 24.2 24.6
+ [61] 25.0 25.4 25.8 26.2 26.6 27.0 27.4 27.8 28.2 28.6 29.0 29.4 29.8 30.2 30.6
+ [76] 31.0 31.4 31.8 32.2 32.6 33.0 33.4 33.8 34.2 34.6 35.0 35.4 35.8 36.2 36.6
+ [91] 37.0 37.4 37.8 38.2 38.6 39.0 39.4 39.8 40.2 40.6 41.0 41.4 41.8 42.2 42.6
+[106] 43.0 43.4 43.8 44.2 44.6 45.0 45.4 45.8 46.2 46.6 47.0 47.4 47.8 48.2 48.6
+[121] 49.0 49.4 49.8 50.2 50.6 51.0 51.4 51.8 52.2 52.6 53.0 53.4 53.8 54.2 54.6
+[136] 55.0 55.4 55.8 56.2 56.6 57.0 57.4 57.8 58.2 58.6 59.0 59.4 59.8 60.2 60.6
+[151] 61.0 61.4 61.8 62.2 62.6 63.0 63.4 63.8 64.2 64.6 65.0 65.4 65.8 66.2 66.6
+[166] 67.0 67.4 67.8 68.2 68.6 69.0 69.4 69.8 70.2 70.6 71.0 71.4 71.8 72.2 72.6
+[181] 73.0 73.4 73.8 74.2 74.6 75.0 75.4 75.8 76.2 76.6 77.0 77.4 77.8 78.2 78.6
+[196] 79.0 79.4 79.8 80.2 80.6 81.0 81.4 81.8 82.2 82.6 83.0 83.4 83.8 84.2 84.6
+[211] 85.0 85.4 85.8 86.2 86.6 87.0 87.4 87.8 88.2 88.6 89.0 89.4 89.8 90.2 90.6
+[226] 91.0 91.4 91.8 92.2 92.6 93.0 93.4 93.8 94.2 94.6 95.0 95.4 95.8 96.2 96.6
+[241] 97.0 97.4 97.8 98.2 98.6 99.0 99.4 99.8</code></pre>
+<ol start="6" style="list-style-type: decimal">
+<li>Observe the differences in running the following codes.</li>
+</ol>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="intro.html#cb2-1" aria-hidden="true" tabindex="-1"></a>vec1 <span class="ot">&lt;-</span> <span class="fl">1.8</span><span class="sc">:</span><span class="fl">20.8</span></span>
+<span id="cb2-2"><a href="intro.html#cb2-2" aria-hidden="true" tabindex="-1"></a>vec1</span></code></pre></div>
+<pre><code> [1]  1.8  2.8  3.8  4.8  5.8  6.8  7.8  8.8  9.8 10.8 11.8 12.8 13.8 14.8 15.8
+[16] 16.8 17.8 18.8 19.8 20.8</code></pre>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="intro.html#cb4-1" aria-hidden="true" tabindex="-1"></a>vec2 <span class="ot">&lt;-</span> <span class="fl">1.8</span><span class="sc">:</span><span class="dv">30</span></span>
+<span id="cb4-2"><a href="intro.html#cb4-2" aria-hidden="true" tabindex="-1"></a>vec2</span></code></pre></div>
+<pre><code> [1]  1.8  2.8  3.8  4.8  5.8  6.8  7.8  8.8  9.8 10.8 11.8 12.8 13.8 14.8 15.8
+[16] 16.8 17.8 18.8 19.8 20.8 21.8 22.8 23.8 24.8 25.8 26.8 27.8 28.8 29.8</code></pre>
+</div>
+<div id="object-classes-and-type-of-objects" class="section level2" number="2.3">
+<h2><span class="header-section-number">2.3</span> Object classes and type of objects</h2>
+<ol start="7" style="list-style-type: decimal">
+<li>Use <code>typeof</code> to identify the storage mode of the following objects and <code>class</code> to identify object classes.</li>
+</ol>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="intro.html#cb6-1" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;MON&quot;</span>, <span class="st">&quot;TUES&quot;</span>, <span class="st">&quot;WED&quot;</span>, <span class="st">&quot;THUR&quot;</span>, <span class="st">&quot;FRI&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="intro.html#cb7-1" aria-hidden="true" tabindex="-1"></a>b <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="intro.html#cb8-1" aria-hidden="true" tabindex="-1"></a>c <span class="ot">&lt;-</span> <span class="fu">c</span>(1L, 2L, 3L, 4L, 5L)</span></code></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="intro.html#cb9-1" aria-hidden="true" tabindex="-1"></a>d <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="cn">TRUE</span>, <span class="cn">FALSE</span>, <span class="cn">TRUE</span>, <span class="cn">TRUE</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="intro.html#cb10-1" aria-hidden="true" tabindex="-1"></a>e <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">2</span><span class="sc">+</span>3i, <span class="dv">1</span><span class="sc">+</span>2i, <span class="dv">5</span><span class="sc">+</span>3i)</span></code></pre></div>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="intro.html#cb11-1" aria-hidden="true" tabindex="-1"></a>f <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;MON&quot;</span>, <span class="cn">TRUE</span>, <span class="dv">1</span>, 1L)</span></code></pre></div>
+<ol start="8" style="list-style-type: decimal">
+<li>Explore comment on the output of following vector functions.</li>
+</ol>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="intro.html#cb12-1" aria-hidden="true" tabindex="-1"></a>a1 <span class="ot">&lt;-</span> <span class="fu">vector</span>(<span class="st">&quot;numeric&quot;</span>, <span class="dv">8</span>)</span>
+<span id="cb12-2"><a href="intro.html#cb12-2" aria-hidden="true" tabindex="-1"></a>a2 <span class="ot">&lt;-</span> <span class="fu">vector</span>(<span class="st">&quot;complex&quot;</span>, <span class="dv">8</span>)</span>
+<span id="cb12-3"><a href="intro.html#cb12-3" aria-hidden="true" tabindex="-1"></a>a3 <span class="ot">&lt;-</span> <span class="fu">vector</span>(<span class="st">&quot;logical&quot;</span>, <span class="dv">8</span>)</span>
+<span id="cb12-4"><a href="intro.html#cb12-4" aria-hidden="true" tabindex="-1"></a>a4 <span class="ot">&lt;-</span> <span class="fu">vector</span>(<span class="st">&quot;character&quot;</span>, <span class="dv">8</span>)</span>
+<span id="cb12-5"><a href="intro.html#cb12-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-6"><a href="intro.html#cb12-6" aria-hidden="true" tabindex="-1"></a>b1 <span class="ot">&lt;-</span> <span class="fu">numeric</span>(<span class="dv">8</span>)</span>
+<span id="cb12-7"><a href="intro.html#cb12-7" aria-hidden="true" tabindex="-1"></a>b2 <span class="ot">&lt;-</span> <span class="fu">complex</span>(<span class="dv">8</span>)</span>
+<span id="cb12-8"><a href="intro.html#cb12-8" aria-hidden="true" tabindex="-1"></a>b3 <span class="ot">&lt;-</span> <span class="fu">logical</span>(<span class="dv">8</span>)</span>
+<span id="cb12-9"><a href="intro.html#cb12-9" aria-hidden="true" tabindex="-1"></a>b4 <span class="ot">&lt;-</span> <span class="fu">character</span>(<span class="dv">8</span>)</span></code></pre></div>
+</div>
+<div id="subsetting-of-vectors" class="section level2" number="2.4">
+<h2><span class="header-section-number">2.4</span> Subsetting of vectors</h2>
+<ol start="9" style="list-style-type: decimal">
+<li>Consider the vector <code>x</code>.</li>
+</ol>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="intro.html#cb13-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">10</span></span></code></pre></div>
+<p>What does each of the following codes do?</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="intro.html#cb14-1" aria-hidden="true" tabindex="-1"></a>x[<span class="dv">3</span>]</span>
+<span id="cb14-2"><a href="intro.html#cb14-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-3"><a href="intro.html#cb14-3" aria-hidden="true" tabindex="-1"></a>x[<span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">4</span>)]</span>
+<span id="cb14-4"><a href="intro.html#cb14-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-5"><a href="intro.html#cb14-5" aria-hidden="true" tabindex="-1"></a>x[<span class="sc">-</span><span class="dv">1</span>]</span>
+<span id="cb14-6"><a href="intro.html#cb14-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-7"><a href="intro.html#cb14-7" aria-hidden="true" tabindex="-1"></a>x[<span class="fu">c</span>(<span class="dv">2</span>, <span class="sc">-</span><span class="dv">4</span>)]</span>
+<span id="cb14-8"><a href="intro.html#cb14-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-9"><a href="intro.html#cb14-9" aria-hidden="true" tabindex="-1"></a>x[<span class="fu">c</span>(<span class="fl">2.4</span>, <span class="fl">3.54</span>)]</span></code></pre></div>
+<ol start="10" style="list-style-type: decimal">
+<li>Consider the following vector</li>
+</ol>
+<pre><code>  [1] -0.97448987 -1.27461307  0.48801800  0.49141295 -0.67692483  1.34014254
+  [7]  2.18583063 -0.17553252 -1.63483137  0.03024727 -2.11800235  0.18654600
+ [13]  1.39701400  0.14609591 -1.83088596 -2.36168175 -2.02598608  0.67525542
+ [19]  1.15826732 -0.37223351 -0.08631292 -0.46437630 -0.78819679  0.04924904
+ [25] -0.78357858  1.05806879  0.13313826  0.76659792  0.12350731 -0.55793273
+ [31]  1.03673831  1.38740632 -1.21604544 -1.27585619 -1.27849850 -0.46260147
+ [37]  1.11404898 -0.60577065 -0.05419039  0.82942191 -0.11990169 -1.14907057
+ [43] -1.06150768 -0.26883482  1.43786263 -0.76171195 -0.14256348  0.79500907
+ [49] -0.09093005  1.68983869  0.48986626 -0.49533952 -0.76212444 -0.45888922
+ [55] -0.64235313  0.32436572 -0.86661285  0.12504993 -1.30756345 -1.20334635
+ [61] -0.59564966  1.62625440  0.59231311  1.42604105 -0.23446921 -0.82578278
+ [67] -0.79852124  0.88041040  0.65535406  0.20698931 -0.99832265 -2.12806683
+ [73]  1.43832441 -0.18321060 -0.34885211 -0.76699277  0.75013339  0.29268751
+ [79] -1.08067845  0.87199830 -1.11618678 -0.60850387 -0.30167388 -0.89210264
+ [85] -1.64258734 -0.67589617  0.45925549  0.54833515 -0.17458499 -1.01837339
+ [91]  1.26295194  0.07384001  0.75025707 -0.33222339 -0.14743703 -0.46438730
+ [97] -1.24863294  1.48870732  0.71412848 -0.71444642</code></pre>
+<p>You can use the following command to create the above vector.</p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="intro.html#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">1762021</span>)</span>
+<span id="cb16-2"><a href="intro.html#cb16-2" aria-hidden="true" tabindex="-1"></a>st_normal <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">100</span>)</span>
+<span id="cb16-3"><a href="intro.html#cb16-3" aria-hidden="true" tabindex="-1"></a>st_normal</span></code></pre></div>
+<p>Write an R code to drop the elements corresponds to the positions multiply of 10 (10, 20, 30, …).</p>
+</div>
+<div id="filtering-vectors-based-on-conditions" class="section level2" number="2.5">
+<h2><span class="header-section-number">2.5</span> Filtering vectors based on conditions</h2>
+<ol start="11" style="list-style-type: decimal">
+<li>Consider the vector</li>
+</ol>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="intro.html#cb17-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">80</span>, <span class="dv">39</span>, <span class="cn">NA</span>, <span class="dv">51</span>, <span class="dv">51</span>, <span class="dv">11</span>, <span class="cn">NA</span>, <span class="cn">NA</span>, <span class="cn">NA</span>, <span class="dv">100</span>, <span class="dv">80</span>, <span class="dv">70</span>)</span></code></pre></div>
+<ol style="list-style-type: lower-alpha">
+<li><p>Write an R code to extract non-missing values in <code>x</code>.</p></li>
+<li><p>Write an R code to extract missing values and odd-numbers in <code>x</code></p></li>
+<li><p>Write an R code to extract odd numbers on <code>x</code></p></li>
+<li><p>Which values of <code>x</code> are NOT in the set <code>1:50</code></p></li>
+</ol>
+</div>
+<div id="modify-a-vector" class="section level2" number="2.6">
+<h2><span class="header-section-number">2.6</span> Modify a vector</h2>
+<ol start="12" style="list-style-type: decimal">
+<li>Consider the following vector <code>age</code> which includes the age of 10 individuals.</li>
+</ol>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="intro.html#cb18-1" aria-hidden="true" tabindex="-1"></a>age <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">20</span>, <span class="dv">30</span>, <span class="dv">40</span>, <span class="dv">41</span>, <span class="dv">32</span>, <span class="dv">32</span>, <span class="dv">25</span>,  <span class="cn">NA</span>, <span class="cn">NA</span>, <span class="sc">-</span><span class="dv">4</span>, <span class="sc">-</span><span class="dv">6</span>, <span class="dv">9999</span>, <span class="dv">10000</span>)</span></code></pre></div>
+<ol style="list-style-type: lower-alpha">
+<li><p>Convert all negative values to NA.</p></li>
+<li><p>Convert all values of textit{age that are NOT from 10 to 100 and calculate the mean of valid responses.</p></li>
+</ol>
+<ol start="13" style="list-style-type: decimal">
+<li>Consider the following vector of 100 random numbers generated from the standard normal distribution. You can use the code given below to reproduce the vector <code>b</code>.</li>
+</ol>
+<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="intro.html#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">17620212</span>)</span>
+<span id="cb19-2"><a href="intro.html#cb19-2" aria-hidden="true" tabindex="-1"></a>b <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">100</span>)</span>
+<span id="cb19-3"><a href="intro.html#cb19-3" aria-hidden="true" tabindex="-1"></a>b</span></code></pre></div>
+<pre><code>  [1]  0.589528488 -0.662937204  0.238279278  0.183757174 -0.002364399
+  [6]  0.289002107  0.258796402  0.982174159  0.378628085  0.015035037
+ [11] -1.203312799  1.510436562  0.219368378 -0.642429444 -0.373969124
+ [16] -0.239829685 -0.186344734  0.517975563 -1.256355393  1.067433297
+ [21]  1.035128935 -1.016002843  0.830122365  0.427420672  0.170429825
+ [26] -0.001345883 -1.022893025 -0.908602635  0.502535054  0.315929086
+ [31]  1.294309571 -0.303323749 -0.322819573 -1.377566743  2.714915313
+ [36] -0.512573266  1.342424819 -0.457104082 -1.593015886 -0.202338403
+ [41]  1.079678527  0.456102666  1.504041202  0.378318229 -0.289765109
+ [46]  1.019989890  0.665591385 -1.076213455  0.272375584  0.545493842
+ [51]  0.052391342 -0.402364688  0.152662598 -1.486745812  0.102018231
+ [56] -0.024357072  0.068276667  0.075642814  0.379600455 -0.988308679
+ [61]  0.701330674 -0.491165150  1.494498791 -1.773934043 -0.460454009
+ [66]  0.752256616  0.039189614 -0.939203562 -0.419716046  0.084067026
+ [71] -1.081303093  0.780827145  0.207575277  0.733234796 -0.660969465
+ [76]  1.649316796  0.491550464 -0.864054075 -0.919522275 -0.727913488
+ [81]  1.197400462 -1.645388340  1.704924934 -1.650667045  0.377823148
+ [86]  1.436377659 -1.143144414  0.789086285  1.049357974  2.163786809
+ [91]  1.626306920  1.317779758  1.647449733  0.588881226 -0.177613835
+ [96]  0.081191404  0.093051240  1.202918954 -1.783424334  0.725816313</code></pre>
+<ol style="list-style-type: lower-alpha">
+<li><p>Change the first five values in the vector to 1.</p></li>
+<li><p>Change the last five values in the vector to 0.</p></li>
+<li><p>Assign all values grater than 0.5 to 1 and all values less than 0.5 to 0.</p></li>
+<li><p>Recode the 0 values to “MALE” and others to “FEMALE”</p></li>
+</ol>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="matrix-array-data-frame-list.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["rworkbook.pdf", "rworkbook.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>
