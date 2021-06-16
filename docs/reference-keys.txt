@@ -1,4 +1,6 @@
-r-and-r-studio
+r-and-rstudio
+lecture-note
+exercise
 intro
 lecture-slides
 creating-vectors

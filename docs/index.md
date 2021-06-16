@@ -10,7 +10,13 @@ link-citations: yes
 description: "This book contains the tutorials for STA 326 2.0/ ASP 454 2.0 Programming and Data Analysis with R."
 ---
 
-# R and R Studio
+# R and RStudio
+
+## Lecture note
+
+<iframe src="https://hellor.netlify.app/2021/week1/l12021.html#1" width="672" height="400px"></iframe>
+
+## Exercise
 
 1. Create a new project in the RStudio IDE. Name your project as "sta326".
 
@@ -22,10 +28,14 @@ description: "This book contains the tutorials for STA 326 2.0/ ASP 454 2.0 Prog
 
 ![](img/globaloptions.png)
 
-3. Create a new folder called `weeek1` inside your main  R project.
+4. Change the RStudio pane layout according to needs.
 
-4. Open a new script file and save it as week1_exercise.R inside the `week1` folder created in the third step.
+    Help: Tools > Global options > Pane layout and fix it.
 
-5. Go to Exercise 2 and write all codes on the R script `week1_exercise.R`
+5. Create a new folder called `weeek1` inside your main  R project.
+
+6. Open a new script file and save it as week1_exercise.R inside the `week1` folder created in the third step.
+
+7. Go to Exercise 2 and write all codes on the R script `week1_exercise.R`
 
 

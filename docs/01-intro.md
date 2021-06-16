@@ -1,8 +1,9 @@
 # Vectors {#intro}
 
+
 ## Lecture slides
 
-<iframe seamless width="500%" height="500%" frameborde="0" src="https://hellor.netlify.app/2021/week1/l12021.html#1"></iframe>
+<iframe src="https://hellor.netlify.app/2021/week1/l12021.html#1" width="672" height="400px"></iframe>
 
 ## Creating vectors
 

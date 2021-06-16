@@ -1,8 +1,14 @@
 # Vectors {#intro}
 
+
 ## Lecture slides
 
-<iframe seamless width="500%" height="500%" frameborde="0" src="https://hellor.netlify.app/2021/week1/l12021.html#1"></iframe>
+```{r, comment=NA, message=FALSE, echo=FALSE}
+knitr::include_url("https://hellor.netlify.app/2021/week1/l12021.html#1")
+
+#<iframe seamless width="500%" height="500%" frameborde="0" #src="https://hellor.netlify.app/2021/week1/l12021.html#1"></iframe>
+
+```
 
 ## Creating vectors
 
