@@ -1,7 +1,7 @@
 --- 
 title: "Programming and Data Analysis with R"
 author: "Thiyanga S. Talagala"
-date: "2021-06-16"
+date: "2021-07-06"
 site: bookdown::bookdown_site
 documentclass: book
 bibliography: [book.bib, packages.bib]
@@ -36,6 +36,6 @@ description: "This book contains the tutorials for STA 326 2.0/ ASP 454 2.0 Prog
 
 6. Open a new script file and save it as `week1_exercise.R` inside the `week1` folder created in the third step.
 
-7. Go to Exercise 2 and write all codes on the R script `week1_exercise.R`
+7. Go to Exercise \@ref(basics) and write all codes on the R script `week1_exercise.R`
 
 

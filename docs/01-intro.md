@@ -5,6 +5,77 @@
 
 <iframe src="https://hellor.netlify.app/2021/week1/l12021.html#1" width="672" height="400px"></iframe>
 
+
+
+## Familiarization with the basics of R programming{#basics}
+
+1. Type the following commands on your R console.
+
+
+```r
+normal <- rnorm(10)
+normal
+vector <- c(10, 20, 30)
+vector
+x <- 1:100
+x
+y <- rnorm(100)
+y
+plot(x, y)
+```
+
+2. The workspace is where user-defined objects accumulate. Use `ls` to get a list of the objects in the workspace.
+
+3. Each object in R has a data type: 
+
+    i) `numeric` (number - `integer` or `double`), 
+    
+    ii) `integer` (eg: 100L, where the letter "L" declares this as an integer)
+    
+    iii) `character` (text), 
+    
+    iv) `logical` (TRUE / FALSE), 
+    
+    v) `complex` (2 + 3i, where "i" is the imaginary part)
+    
+    The function `typeof` can be used to assess the type of an object; and the function `class` can be used to assess the class attribute of an object. For example
+
+
+```r
+a <- c(10, 20, 30)
+typeof(a)
+```
+
+```
+[1] "double"
+```
+
+```r
+class(a)
+```
+
+```
+[1] "numeric"
+```
+
+explore the type attribute and class type of the following objects.
+
+
+```r
+v1 <- c(10L, 20L, 30L)
+v2 <- c(9i+3, 2i+5, 3i+2, 5i+1)
+v3 <- "R programming is fun."
+v4 <- TRUE
+v5 <- c(TRUE, FALSE, TRUE, FALSE)
+v6 <- c(10, 20, 30, 40, 100)
+```
+
+4. Write an R code to store the data presented in the map.
+
+![](img/map.png)
+
+source: https://fortune.com/2021/06/09/covid-vaccine-rates-world-map-vaccination-by-country/
+
 ## Creating vectors
 
 1. Write R codes to create following vectors    
@@ -20,7 +91,7 @@
 2. Generate a sequence using the code `seq(from=1, to=10, by=1)`. What other ways can you generate the same sequence?
 
 
-3. Using the function  `rep()` , create the below sequence `1, 2, 3, 4, 1, 2, 3, 4, 1, 2, 3, 4`
+3. Using the function  `rep()`, to create the  sequence `1, 2, 3, 4, 1, 2, 3, 4, 1, 2, 3, 4`
 
 4. Create a vector that shows the square root the integers from 1 to 100.
 
@@ -269,4 +340,27 @@ b
   (c) Assign all values grater than 0.5 to 1 and all values less than 0.5 to 0.
     
   (d) Recode the 0 values to "MALE" and others to "FEMALE"
-    
+
+
+## Application of vectors
+
+We are in the midst of a medical crisis! The deadly coronavirus  has infected 1 million people worldwide and is now spreading across the globe at an alarming rate. World Health Organization (WHO) alerted the world about the Novel Coronavirus(2019-nCoV) in January, 2020. After issuance of the global alert, a formal reporting of Corona cases was put in place, and WHO published daily reports on the number of cases on their website [here](https://www.who.int/emergencies/diseases/novel-coronavirus-2019/situation-reports). Use WHO: Situation Report-21 for this question. Situation Report - 21 is available [here](https://www.who.int/docs/default-source/coronaviruse/situation-reports/20200210-sitrep-21-ncov.pdf?sfvrsn=947679ef_2).
+
+
+Table 1 reports the confirmed cases of 2019-nCoV reported by provinces, regions and cities in China.
+
+i) Enter confirmed cases in table 1 to a vector.
+
+ii) Name the elements by province/regions/cities in China.
+
+iii) Write R codes to answer the following questions.
+
+      (a) Which province/region/city has the highest number of confirmed cases?
+
+      (b) Number of confirmed cases reported in Hebei, China.
+
+      (c) Total number of confirmed cases reported in China
+
+      (d) Number of cases reported in the capital of China
+
+      (c) Number of cases reported in Inner Mongolia

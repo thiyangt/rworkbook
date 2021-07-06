@@ -41,6 +41,6 @@ knitr::include_url("https://hellor.netlify.app/2021/week1/l12021.html#1")
 
 6. Open a new script file and save it as `week1_exercise.R` inside the `week1` folder created in the third step.
 
-7. Go to Exercise 2 and write all codes on the R script `week1_exercise.R`
+7. Go to Exercise \@ref(basics) and write all codes on the R script `week1_exercise.R`
 
 
