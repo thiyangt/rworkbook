@@ -1,3 +1,123 @@
-#  Matrix, Array, Data Frame, List
 
-Here is a review of existing methods.
+# Matrices, Arrays, Data frames
+
+## Lecture slides
+
+```{r, comment=NA, message=FALSE, echo=FALSE}
+knitr::include_url("https://hellor.netlify.app/slides/l22021.html#1")
+
+#<iframe seamless width="500%" height="500%" frameborde="0" #src="https://hellor.netlify.app/2021/week1/l12021.html#1"></iframe>
+
+```
+
+
+## Matrices
+
+Use the code below to create the vector `uniform.values`.
+
+```{r}
+set.seed(21)
+uniform.values <- runif(50)
+uniform.values
+```
+ 
+1. Arrange data in `uniform.values` according to the following formats:
+
+  (a) single row matrix.
+    
+  (b) single column matrix
+    
+  (c) matrix $5 \times 10$ 
+    
+  (d) matrix $10 \times 5$ 
+  
+2. Write the code to output the following matrix.
+
+```{r, comment=NA, echo=FALSE}
+rnames <- c("a", "b")
+cnames <- rep(NA, 25)
+a <- matrix(uniform.values, byrow=TRUE, nrow=2, dimnames = list(rnames))
+a
+```
+
+3. Matrix visualization: The matrix `m` contains 70 randomly generated values from the $Unif(0, 1)$ distribution. The R function `image` is used to visualize the matrix.  
+
+```{r, comment=NA}
+set.seed(1)
+values <- runif(70)
+m <- matrix(values, 10, 7)
+m
+image(m, useRaster=TRUE, axes=FALSE)
+```
+
+a) Record the values in the matrix (m) as follows: matrix value = 0 if value lessthan 0.5 and 1 otherwise. Write an R code to visualize the new matrix.
+
+```{r, comment=NA, echo=FALSE, eval=FALSE}
+m[m < 0.5] <- 0
+m[m >=0.5] <- 1
+image(m, useRaster=TRUE, axes=FALSE)
+
+```
+
+b) Consider the matrix `ymat` given below. Convert all even index position values to 0 and odd position values to 1. 
+
+```{r, echo=FALSE}
+ymat <- matrix(1:100, ncol=10, nrow = 10) *10
+```
+
+```{r, echo=FALSE, comment=NA}
+ymat
+```
+
+ 
+
+Help:
+
+```{r, comment=NA}
+5 %% 2
+6 %% 2
+```
+
+Visualize the matrix using the `image` function. Your output should look like this:
+
+```{r, echo=FALSE}
+ymat <- ymat/10
+ymat <- ymat %% 2
+image(ymat, useRaster=TRUE, axes=FALSE)
+```
+
+## Array
+
+Write R codes to create the following arrays.
+
+(a)
+
+```{r, comment=NA, message=FALSE, echo=FALSE}
+# Create two vectors of different lengths.
+vector1 <- c(1, 2, 3)
+vector2 <- c(10,11,12,13,14,15)
+column.names <- c("COL1","COL2","COL3")
+row.names <- c("ROW1","ROW2","ROW3")
+matrix.names <- c("Matrix1","Matrix2")
+
+# Take these vectors as input to the array.
+result <- array(c(vector1,vector2),dim = c(3,3,2),dimnames = list(row.names,column.names,
+   matrix.names))
+result
+```
+
+(b)
+
+```{r, comment=NA, message=FALSE, echo=FALSE}
+array(2:13, dim = c(2, 3, 2))
+```
+
+
+## Dataframe
+
+1. Store the following values into a data frame.
+
+
+
+
+

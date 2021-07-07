@@ -17,3 +17,13 @@ familiarization-with-the-basics-of-r-programming.
 familiarization-with-the-basics-of-r-programming-basics.
 basics
 section
+matrices-arrays-data-frames
+matrices
+array
+dataframe
+matrices-arrays-data-frames-1
+matrices-1
+array-1
+dataframe-1
+functions-in-r-1
+lecture-slides-1
