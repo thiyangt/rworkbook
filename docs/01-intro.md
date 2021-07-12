@@ -178,7 +178,7 @@ e <- c(2+3i, 1+2i, 5+3i)
 f <- c("MON", TRUE, 1, 1L)
 ```
 
-8. Explore comment on the output of following vector functions. 
+8. Explore and comment on the output of following vector functions. 
 
 
 ```r
