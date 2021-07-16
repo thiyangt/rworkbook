@@ -27,3 +27,4 @@ array-1
 dataframe-1
 functions-in-r-1
 lecture-slides-1
+list

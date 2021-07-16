@@ -158,7 +158,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3.1" data-path="matrices-arrays-data-frames.html"><a href="matrices-arrays-data-frames.html#lecture-slides-1"><i class="fa fa-check"></i><b>3.1</b> Lecture slides</a></li>
 <li class="chapter" data-level="3.2" data-path="matrices-arrays-data-frames.html"><a href="matrices-arrays-data-frames.html#matrices"><i class="fa fa-check"></i><b>3.2</b> Matrices</a></li>
 <li class="chapter" data-level="3.3" data-path="matrices-arrays-data-frames.html"><a href="matrices-arrays-data-frames.html#array"><i class="fa fa-check"></i><b>3.3</b> Array</a></li>
-<li class="chapter" data-level="3.4" data-path="matrices-arrays-data-frames.html"><a href="matrices-arrays-data-frames.html#dataframe"><i class="fa fa-check"></i><b>3.4</b> Dataframe</a></li>
+<li class="chapter" data-level="3.4" data-path="matrices-arrays-data-frames.html"><a href="matrices-arrays-data-frames.html#list"><i class="fa fa-check"></i><b>3.4</b> List</a></li>
+<li class="chapter" data-level="3.5" data-path="matrices-arrays-data-frames.html"><a href="matrices-arrays-data-frames.html#dataframe"><i class="fa fa-check"></i><b>3.5</b> Dataframe</a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="functions-in-r.html"><a href="functions-in-r.html"><i class="fa fa-check"></i><b>4</b> Functions in R</a></li>
 <li class="chapter" data-level="5" data-path="functions-in-r-1.html"><a href="functions-in-r-1.html"><i class="fa fa-check"></i><b>5</b> Functions in R</a></li>
@@ -197,15 +198,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="matrices-arrays-data-frames.html#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">21</span>)</span>
 <span id="cb1-2"><a href="matrices-arrays-data-frames.html#cb1-2" aria-hidden="true" tabindex="-1"></a>uniform.values <span class="ot">&lt;-</span> <span class="fu">runif</span>(<span class="dv">50</span>)</span>
 <span id="cb1-3"><a href="matrices-arrays-data-frames.html#cb1-3" aria-hidden="true" tabindex="-1"></a>uniform.values</span></code></pre></div>
-<pre><code>##  [1] 0.78611493 0.25244560 0.69925230 0.18446075 0.95961383 0.91868340
-##  [7] 0.10180455 0.17219168 0.98600368 0.84939610 0.66754012 0.93521022
-## [13] 0.05818433 0.61861583 0.17491846 0.03767539 0.52531317 0.28218425
-## [19] 0.49904520 0.63382510 0.01139965 0.60785656 0.77559853 0.92397118
-## [25] 0.29170673 0.78907624 0.56849721 0.77843508 0.71323253 0.66904867
-## [31] 0.93470991 0.50646019 0.74506019 0.83835263 0.86907475 0.19311168
-## [37] 0.21633194 0.65042346 0.33516604 0.50765589 0.65283937 0.96557667
-## [43] 0.51466067 0.06165677 0.15101646 0.63556589 0.10296050 0.77269430
-## [49] 0.41022537 0.87023337</code></pre>
+<pre><code> [1] 0.78611493 0.25244560 0.69925230 0.18446075 0.95961383 0.91868340
+ [7] 0.10180455 0.17219168 0.98600368 0.84939610 0.66754012 0.93521022
+[13] 0.05818433 0.61861583 0.17491846 0.03767539 0.52531317 0.28218425
+[19] 0.49904520 0.63382510 0.01139965 0.60785656 0.77559853 0.92397118
+[25] 0.29170673 0.78907624 0.56849721 0.77843508 0.71323253 0.66904867
+[31] 0.93470991 0.50646019 0.74506019 0.83835263 0.86907475 0.19311168
+[37] 0.21633194 0.65042346 0.33516604 0.50765589 0.65283937 0.96557667
+[43] 0.51466067 0.06165677 0.15101646 0.63556589 0.10296050 0.77269430
+[49] 0.41022537 0.87023337</code></pre>
 <ol style="list-style-type: decimal">
 <li>Arrange data in <code>uniform.values</code> according to the following formats:</li>
 </ol>
@@ -270,12 +271,16 @@ b 0.1029605 0.7726943 0.4102254 0.8702334</code></pre>
 <pre><code>[1] 1</code></pre>
 <div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="matrices-arrays-data-frames.html#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="dv">6</span> <span class="sc">%%</span> <span class="dv">2</span></span></code></pre></div>
 <pre><code>[1] 0</code></pre>
-<p>Visualize the matrix using the <code>image</code> function. Your output should look like this:</p>
+<ol start="3" style="list-style-type: lower-alpha">
+<li>Visualize the resulted matrix using the <code>image</code> function. Your output should look like this:</li>
+</ol>
 <p><img src="02-literature_files/figure-html/unnamed-chunk-9-1.png" width="672" /></p>
 </div>
 <div id="array" class="section level2" number="3.3">
 <h2><span class="header-section-number">3.3</span> Array</h2>
-<p>Write R codes to create the following arrays.</p>
+<ol style="list-style-type: decimal">
+<li>Write R codes to create the following arrays.</li>
+</ol>
 <ol style="list-style-type: lower-alpha">
 <li></li>
 </ol>
@@ -307,10 +312,24 @@ ROW3    3   12   15</code></pre>
 [1,]    8   10   12
 [2,]    9   11   13</code></pre>
 </div>
-<div id="dataframe" class="section level2" number="3.4">
-<h2><span class="header-section-number">3.4</span> Dataframe</h2>
+<div id="list" class="section level2" number="3.4">
+<h2><span class="header-section-number">3.4</span> List</h2>
 <ol style="list-style-type: decimal">
-<li>Store the following values into a data frame.</li>
+<li>Create a list store the built-in dataset <code>iris</code> dataset and “scatterplot of <code>Sepal.Width</code> and <code>Sepal.Length</code>.”</li>
+</ol>
+</div>
+<div id="dataframe" class="section level2" number="3.5">
+<h2><span class="header-section-number">3.5</span> Dataframe</h2>
+<p>There are several datasets, which comes with R installation. For example <code>iris</code>, <code>mtcars</code> and ,any more. In this exercise we will work with the <code>mtcars</code> dataset in R.You may refer to the help page <code>?mtcars</code> for more details about the dataset.</p>
+<ol style="list-style-type: decimal">
+<li><p>Use suitable R functions for quick exploration of data. Help: <code>str</code>, <code>head</code>, <code>tail</code>, <code>dim</code>, <code>nrow</code>, <code>ncol</code>.</p></li>
+<li><p>What happens when you call <code>View()</code> on <code>mtcars</code>?</p></li>
+<li><p>Write an R code to extract column names and row names.</p></li>
+<li><p>Extract and display the column corresponding to the number of cylinders.</p></li>
+<li><p>Extract and display the observations of cars with 4 cylinders AND 4 gears.</p></li>
+<li><p>What is the maximum <code>mpg</code>?</p></li>
+<li><p>Which car has the maximum <code>mpg</code>?</p></li>
+<li><p>Compute suitable summary statistics for each column.</p></li>
 </ol>
 
 </div>

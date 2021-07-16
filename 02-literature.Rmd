@@ -15,7 +15,7 @@ knitr::include_url("https://hellor.netlify.app/slides/l22021.html#1")
 
 Use the code below to create the vector `uniform.values`.
 
-```{r}
+```{r, comment=NA}
 set.seed(21)
 uniform.values <- runif(50)
 uniform.values
@@ -78,7 +78,7 @@ Help:
 6 %% 2
 ```
 
-Visualize the matrix using the `image` function. Your output should look like this:
+c) Visualize the resulted matrix using the `image` function. Your output should look like this:
 
 ```{r, echo=FALSE}
 ymat <- ymat/10
@@ -88,7 +88,7 @@ image(ymat, useRaster=TRUE, axes=FALSE)
 
 ## Array
 
-Write R codes to create the following arrays.
+1. Write R codes to create the following arrays.
 
 (a)
 
@@ -112,11 +112,31 @@ result
 array(2:13, dim = c(2, 3, 2))
 ```
 
+## List
+
+1. Create a list store the built-in dataset  `iris` dataset and "scatterplot of `Sepal.Width` and `Sepal.Length`". 
+
 
 ## Dataframe
 
-1. Store the following values into a data frame.
 
+There are several datasets, which comes with R installation. For example `iris`, `mtcars` and ,any more. In this exercise we will work with the `mtcars` dataset in R.You may refer to the help page `?mtcars` for more details about the dataset.
+
+1. Use suitable R functions for quick exploration of data. Help: `str`, `head`, `tail`, `dim`, `nrow`, `ncol`.
+
+2. What happens when you call `View()` on `mtcars`?
+
+3. Write an R code to extract column names and row names.
+
+4. Extract and display the column corresponding to the number of cylinders.
+
+5. Extract and display the observations of cars with 4 cylinders AND 4 gears.
+
+6. What is the maximum `mpg`?
+
+7. Which car has the maximum `mpg`?
+
+8. Compute suitable summary statistics for each column.
 
 
 

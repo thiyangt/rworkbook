@@ -18,15 +18,15 @@ uniform.values
 ```
 
 ```
-##  [1] 0.78611493 0.25244560 0.69925230 0.18446075 0.95961383 0.91868340
-##  [7] 0.10180455 0.17219168 0.98600368 0.84939610 0.66754012 0.93521022
-## [13] 0.05818433 0.61861583 0.17491846 0.03767539 0.52531317 0.28218425
-## [19] 0.49904520 0.63382510 0.01139965 0.60785656 0.77559853 0.92397118
-## [25] 0.29170673 0.78907624 0.56849721 0.77843508 0.71323253 0.66904867
-## [31] 0.93470991 0.50646019 0.74506019 0.83835263 0.86907475 0.19311168
-## [37] 0.21633194 0.65042346 0.33516604 0.50765589 0.65283937 0.96557667
-## [43] 0.51466067 0.06165677 0.15101646 0.63556589 0.10296050 0.77269430
-## [49] 0.41022537 0.87023337
+ [1] 0.78611493 0.25244560 0.69925230 0.18446075 0.95961383 0.91868340
+ [7] 0.10180455 0.17219168 0.98600368 0.84939610 0.66754012 0.93521022
+[13] 0.05818433 0.61861583 0.17491846 0.03767539 0.52531317 0.28218425
+[19] 0.49904520 0.63382510 0.01139965 0.60785656 0.77559853 0.92397118
+[25] 0.29170673 0.78907624 0.56849721 0.77843508 0.71323253 0.66904867
+[31] 0.93470991 0.50646019 0.74506019 0.83835263 0.86907475 0.19311168
+[37] 0.21633194 0.65042346 0.33516604 0.50765589 0.65283937 0.96557667
+[43] 0.51466067 0.06165677 0.15101646 0.63556589 0.10296050 0.77269430
+[49] 0.41022537 0.87023337
 ```
  
 1. Arrange data in `uniform.values` according to the following formats:
@@ -131,13 +131,13 @@ Help:
 [1] 0
 ```
 
-Visualize the matrix using the `image` function. Your output should look like this:
+c) Visualize the resulted matrix using the `image` function. Your output should look like this:
 
 <img src="02-literature_files/figure-html/unnamed-chunk-9-1.png" width="672" />
 
 ## Array
 
-Write R codes to create the following arrays.
+1. Write R codes to create the following arrays.
 
 (a)
 
@@ -175,11 +175,31 @@ ROW3    3   12   15
 [2,]    9   11   13
 ```
 
+## List
+
+1. Create a list store the built-in dataset  `iris` dataset and "scatterplot of `Sepal.Width` and `Sepal.Length`". 
+
 
 ## Dataframe
 
-1. Store the following values into a data frame.
 
+There are several datasets, which comes with R installation. For example `iris`, `mtcars` and ,any more. In this exercise we will work with the `mtcars` dataset in R.You may refer to the help page `?mtcars` for more details about the dataset.
+
+1. Use suitable R functions for quick exploration of data. Help: `str`, `head`, `tail`, `dim`, `nrow`, `ncol`.
+
+2. What happens when you call `View()` on `mtcars`?
+
+3. Write an R code to extract column names and row names.
+
+4. Extract and display the column corresponding to the number of cylinders.
+
+5. Extract and display the observations of cars with 4 cylinders AND 4 gears.
+
+6. What is the maximum `mpg`?
+
+7. Which car has the maximum `mpg`?
+
+8. Compute suitable summary statistics for each column.
 
 
 
