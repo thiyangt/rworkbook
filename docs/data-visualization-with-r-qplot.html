@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Exercise 6 Writing Functions in R | Programming and Data Analysis with R</title>
+  <title>Exercise 5 Data Visualization with R: qplot | Programming and Data Analysis with R</title>
   <meta name="description" content="This book contains the tutorials for STA 326 2.0/ ASP 454 2.0 Programming and Data Analysis with R." />
   <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Exercise 6 Writing Functions in R | Programming and Data Analysis with R" />
+  <meta property="og:title" content="Exercise 5 Data Visualization with R: qplot | Programming and Data Analysis with R" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Exercise 6 Writing Functions in R | Programming and Data Analysis with R" />
+  <meta name="twitter:title" content="Exercise 5 Data Visualization with R: qplot | Programming and Data Analysis with R" />
   
   <meta name="twitter:description" content="This book contains the tutorials for STA 326 2.0/ ASP 454 2.0 Programming and Data Analysis with R." />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="data-visualization-with-r-qplot.html"/>
-<link rel="next" href="references.html"/>
+<link rel="prev" href="built-in-functions-in-r.html"/>
+<link rel="next" href="writing-functions-in-r.html"/>
 <script src="libs/header-attrs-2.9/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -173,11 +173,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="5.2" data-path="data-visualization-with-r-qplot.html"><a href="data-visualization-with-r-qplot.html#visualizing-the-diamonds-dataset-using-r"><i class="fa fa-check"></i><b>5.2</b> Visualizing the <code>diamonds</code> dataset using R</a></li>
 <li class="chapter" data-level="5.3" data-path="data-visualization-with-r-qplot.html"><a href="data-visualization-with-r-qplot.html#answers"><i class="fa fa-check"></i><b>5.3</b> Answers</a></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="writing-functions-in-r.html"><a href="writing-functions-in-r.html"><i class="fa fa-check"></i><b>6</b> Writing Functions in R</a>
-<ul>
-<li class="chapter" data-level="6.1" data-path="writing-functions-in-r.html"><a href="writing-functions-in-r.html#lectures"><i class="fa fa-check"></i><b>6.1</b> Lectures</a></li>
-<li class="chapter" data-level="6.2" data-path="writing-functions-in-r.html"><a href="writing-functions-in-r.html#problems"><i class="fa fa-check"></i><b>6.2</b> Problems</a></li>
-</ul></li>
+<li class="chapter" data-level="6" data-path="writing-functions-in-r.html"><a href="writing-functions-in-r.html"><i class="fa fa-check"></i><b>6</b> Writing Functions in R</a></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -199,46 +195,86 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="writing-functions-in-r" class="section level1" number="6">
-<h1><span class="header-section-number">Exercise 6</span> Writing Functions in R</h1>
-<div id="lectures" class="section level2" number="6.1">
-<h2><span class="header-section-number">6.1</span> Lectures</h2>
-<iframe src="https://hellor.netlify.app/slides/l52021.html#1" width="672" height="400px">
+<div id="data-visualization-with-r-qplot" class="section level1" number="5">
+<h1><span class="header-section-number">Exercise 5</span> Data Visualization with R: qplot</h1>
+<div id="lecture-slides-3" class="section level2" number="5.1">
+<h2><span class="header-section-number">5.1</span> Lecture Slides</h2>
+<iframe src="https://hellor.netlify.app/slides/l42021.html#1" width="672" height="400px">
 </iframe>
 </div>
-<div id="problems" class="section level2" number="6.2">
-<h2><span class="header-section-number">6.2</span> Problems</h2>
-<ol style="list-style-type: decimal">
-<li><p>Write an R function to compute the sample excess kurtosis.</p></li>
-<li><p>Write an R function to convert a vector of numeric values to the corresponding z-score vector.</p></li>
-<li><p>Write an R function to generate <span class="math inline">\(n\)</span> random numbers from a normal distribution <strong>and</strong> <span class="math inline">\(m\)</span> random numbers from a uniform distribution.</p></li>
-<li><p>The secant method for finding the solution of an equation of the form <span class="math inline">\(f(x)=0\)</span> is</p></li>
-</ol>
-<p><span class="math display">\[x_n=x_{n-1} - \frac{(x_{n-1}-x_{n-2})f(x_{n-1})}{f(x_{n-1})-f(x_{n-2})},\]</span></p>
-<p>where two initial guesses <span class="math inline">\(x_1\)</span> and <span class="math inline">\(x_2\)</span> must be specified beforehand.</p>
-<p>The <code>secant</code> function given below can be used to find the solutions of a functions using the secant method.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="writing-functions-in-r.html#cb1-1" aria-hidden="true" tabindex="-1"></a>secant <span class="ot">&lt;-</span> <span class="cf">function</span>(x1, x2, f){</span>
-<span id="cb1-2"><a href="writing-functions-in-r.html#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-3"><a href="writing-functions-in-r.html#cb1-3" aria-hidden="true" tabindex="-1"></a>fx1 <span class="ot">&lt;-</span> <span class="fu">f</span>(x1)</span>
-<span id="cb1-4"><a href="writing-functions-in-r.html#cb1-4" aria-hidden="true" tabindex="-1"></a>xdiff <span class="ot">&lt;-</span> x2 <span class="sc">-</span> x1</span>
-<span id="cb1-5"><a href="writing-functions-in-r.html#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="cf">repeat</span>{</span>
-<span id="cb1-6"><a href="writing-functions-in-r.html#cb1-6" aria-hidden="true" tabindex="-1"></a>fx2 <span class="ot">&lt;-</span> <span class="fu">f</span>(x2)</span>
-<span id="cb1-7"><a href="writing-functions-in-r.html#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-8"><a href="writing-functions-in-r.html#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="fu">abs</span>(fx2) <span class="sc">&lt;</span> <span class="fl">1e-8</span>) <span class="cf">break</span></span>
-<span id="cb1-9"><a href="writing-functions-in-r.html#cb1-9" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> x2 <span class="sc">-</span> xdiff<span class="sc">*</span>fx2<span class="sc">/</span>(fx2 <span class="sc">-</span> fx1)</span>
-<span id="cb1-10"><a href="writing-functions-in-r.html#cb1-10" aria-hidden="true" tabindex="-1"></a>xdiff <span class="ot">&lt;-</span> x <span class="sc">-</span> x2</span>
-<span id="cb1-11"><a href="writing-functions-in-r.html#cb1-11" aria-hidden="true" tabindex="-1"></a>x2 <span class="ot">&lt;-</span> x</span>
-<span id="cb1-12"><a href="writing-functions-in-r.html#cb1-12" aria-hidden="true" tabindex="-1"></a>fx1 <span class="ot">&lt;-</span> fx2</span>
-<span id="cb1-13"><a href="writing-functions-in-r.html#cb1-13" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb1-14"><a href="writing-functions-in-r.html#cb1-14" aria-hidden="true" tabindex="-1"></a>x</span>
-<span id="cb1-15"><a href="writing-functions-in-r.html#cb1-15" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<div id="visualizing-the-diamonds-dataset-using-r" class="section level2" number="5.2">
+<h2><span class="header-section-number">5.2</span> Visualizing the <code>diamonds</code> dataset using R</h2>
+<p>This question is based on diamonds dataset in <code>ggplot2</code> package. Load the <code>ggplot2</code> package and the <code>diamonds</code> dataset using the following command.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="data-visualization-with-r-qplot.html#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb1-2"><a href="data-visualization-with-r-qplot.html#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(<span class="st">&quot;diamonds&quot;</span>)</span></code></pre></div>
+<p>To find out what information there is about the dataset, you can run the command:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="data-visualization-with-r-qplot.html#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">help</span>(diamonds)</span></code></pre></div>
+<p>There are over 50000 observations and 10 variables in the diamond dataset. Write down the R codes to reproduce the following graphic outputs.</p>
 <ol style="list-style-type: lower-alpha">
-<li>Write a function named <code>f1</code> which takes a single argument <span class="math inline">\(x\)</span> and returns the values of the function below</li>
+<li></li>
 </ol>
-<p><span class="math display">\[f(x) = e^{-x} - x.\]</span></p>
+<p><img src="04-application_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
+<p>Help: use <code>fill</code> option to assign colours and <code>alpha</code> option to add transparency to the bars.</p>
 <ol start="2" style="list-style-type: lower-alpha">
-<li>Apply the <code>secant</code> function to find the solution of <span class="math inline">\(e^{-x} - x = 0.\)</span> Help: Use -1.5 and -0.5 as your starting guess.</li>
+<li></li>
 </ol>
+<p><img src="04-application_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
+<p>Help: use geoms, <code>point</code> and <code>smooth</code>.</p>
+<ol start="3" style="list-style-type: lower-alpha">
+<li></li>
+</ol>
+<p><img src="04-application_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
+<ol start="4" style="list-style-type: lower-alpha">
+<li></li>
+</ol>
+<p><img src="04-application_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
+<ol start="5" style="list-style-type: lower-alpha">
+<li></li>
+</ol>
+<p><img src="04-application_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
+<ol start="6" style="list-style-type: lower-alpha">
+<li></li>
+</ol>
+<p><img src="04-application_files/figure-html/unnamed-chunk-9-1.png" width="672" /></p>
+<ol start="7" style="list-style-type: lower-alpha">
+<li></li>
+</ol>
+<p><img src="04-application_files/figure-html/unnamed-chunk-10-1.png" width="672" /></p>
+<div style="page-break-after: always;"></div>
+</div>
+<div id="answers" class="section level2" number="5.3">
+<h2><span class="header-section-number">5.3</span> Answers</h2>
+<p><strong>Section 4.3</strong></p>
+<ol style="list-style-type: lower-alpha">
+<li></li>
+</ol>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="data-visualization-with-r-qplot.html#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb3-2"><a href="data-visualization-with-r-qplot.html#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(diamonds)</span>
+<span id="cb3-3"><a href="data-visualization-with-r-qplot.html#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">qplot</span>(color, <span class="at">data =</span> diamonds, <span class="at">geom =</span> <span class="st">&quot;bar&quot;</span>, <span class="at">fill =</span> color, <span class="at">alpha =</span> <span class="fl">0.5</span>) </span></code></pre></div>
+<ol start="2" style="list-style-type: lower-alpha">
+<li></li>
+</ol>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="data-visualization-with-r-qplot.html#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">qplot</span>( <span class="at">data =</span> diamonds, carat, price, <span class="at">geom =</span> <span class="fu">c</span>(<span class="st">&quot;point&quot;</span>, <span class="st">&quot;smooth&quot;</span>))</span></code></pre></div>
+<ol start="3" style="list-style-type: lower-alpha">
+<li></li>
+</ol>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="data-visualization-with-r-qplot.html#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">qplot</span>(<span class="at">data =</span> diamonds, <span class="at">x =</span> price, <span class="at">color =</span> color, <span class="at">geom =</span> <span class="st">&#39;boxplot&#39;</span> )</span></code></pre></div>
+<ol start="4" style="list-style-type: lower-alpha">
+<li></li>
+</ol>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="data-visualization-with-r-qplot.html#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">qplot</span>(<span class="at">data =</span> diamonds, <span class="at">y =</span> price, <span class="at">color =</span> color, <span class="at">geom =</span> <span class="st">&#39;boxplot&#39;</span> )</span></code></pre></div>
+<ol start="5" style="list-style-type: lower-alpha">
+<li></li>
+</ol>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="data-visualization-with-r-qplot.html#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">qplot</span>(<span class="at">data =</span> diamonds, <span class="at">y =</span> price, <span class="at">fill =</span> color, <span class="at">geom =</span> <span class="st">&#39;boxplot&#39;</span> )</span></code></pre></div>
+<ol start="6" style="list-style-type: lower-alpha">
+<li></li>
+</ol>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="data-visualization-with-r-qplot.html#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">qplot</span>( <span class="at">data =</span> diamonds, carat, price, <span class="at">colour=</span>color, <span class="at">geom =</span> <span class="st">&quot;point&quot;</span>)</span></code></pre></div>
+<ol start="7" style="list-style-type: lower-alpha">
+<li></li>
+</ol>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="data-visualization-with-r-qplot.html#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">qplot</span>( <span class="at">data =</span> diamonds, carat, price, <span class="at">colour=</span>color, <span class="at">geom =</span> <span class="fu">c</span>(<span class="st">&quot;point&quot;</span>, <span class="st">&quot;smooth&quot;</span>))</span></code></pre></div>
 
 </div>
 </div>
@@ -247,8 +283,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           </div>
         </div>
       </div>
-<a href="data-visualization-with-r-qplot.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="references.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="built-in-functions-in-r.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="writing-functions-in-r.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -299,20 +335,6 @@ gitbook.start({
 });
 </script>
 
-<!-- dynamically load mathjax for compatibility with self-contained -->
-<script>
-  (function () {
-    var script = document.createElement("script");
-    script.type = "text/javascript";
-    var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
-    if (location.protocol !== "file:")
-      if (/^https?:/.test(src))
-        src = src.replace(/^https?:/, '');
-    script.src = src;
-    document.getElementsByTagName("head")[0].appendChild(script);
-  })();
-</script>
 </body>
 
 </html>

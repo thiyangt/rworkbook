@@ -1,4 +1,152 @@
-# Functions in R
+# Data Visualization with R: qplot
+
+## Lecture Slides
+
+
+```{r, comment=NA, message=FALSE, echo=FALSE}
+knitr::include_url("https://hellor.netlify.app/slides/l42021.html#1")
+
+#<iframe seamless width="500%" height="500%" frameborde="0" #src="https://hellor.netlify.app/2021/week1/l12021.html#1"></iframe>
+
+```
+
+## Visualizing the `diamonds` dataset using R
+
+
+This question is based on diamonds dataset in `ggplot2` package. Load the `ggplot2` package and the `diamonds` dataset using the following command.
+
+```{r, comment=NA, echo=TRUE, message=FALSE, warning=FALSE}
+library(ggplot2)
+data("diamonds")
+```
+
+
+To find out what information there is about the dataset, you can run the command:
+
+```{r, comment=NA, echo=TRUE, eval=FALSE}
+help(diamonds)
+```
+
+
+There are over 50000 observations and 10 variables in the diamond dataset. Write down the R codes to reproduce the following graphic outputs.
+
+a. 
+
+```{r, comment=NA, message=FALSE, echo=FALSE}
+library(ggplot2)
+data(diamonds)
+qplot(color, data = diamonds, geom = "bar", fill = color, alpha = 0.5) 
+```
+
+Help: use `fill` option to assign colours and `alpha` option to add transparency to the bars.
+
+b. 
+
+```{r, comment=NA, message=FALSE, echo=FALSE}
+qplot( data = diamonds, carat, price, geom = c("point", "smooth"))
+```
+
+Help: use geoms, `point` and `smooth`.
+
+c. 
+
+```{r, comment=NA, echo=FALSE}
+qplot(data = diamonds, x = price, color = color, geom = 'boxplot' )
+
+```
+
+d. 
+
+
+```{r, comment=NA, echo=FALSE}
+qplot(data = diamonds, y = price, color = color, geom = 'boxplot' )
+
+```
+
+e. 
+
+
+```{r, comment=NA, echo=FALSE}
+qplot(data = diamonds, y = price, fill = color, geom = 'boxplot' )
+
+```
+
+f. 
+
+```{r, comment=NA, message=FALSE, echo=FALSE}
+qplot( data = diamonds, carat, price, colour=color, geom = "point")
+```
+
+g. 
+
+```{r, comment=NA, message=FALSE, echo=FALSE}
+qplot( data = diamonds, carat, price, colour=color, geom = c("point", "smooth"))
+```
+
+
+\newpage
+
+
+## Answers 
+    
+**Section 4.3**
+
+a. 
+
+```{r, comment=NA, message=FALSE, eval=FALSE}
+library(ggplot2)
+data(diamonds)
+qplot(color, data = diamonds, geom = "bar", fill = color, alpha = 0.5) 
+```
+
+
+
+b. 
+
+```{r, comment=NA, message=FALSE, eval=FALSE}
+qplot( data = diamonds, carat, price, geom = c("point", "smooth"))
+```
+
+
+
+c. 
+
+```{r, comment=NA, eval=FALSE}
+qplot(data = diamonds, x = price, color = color, geom = 'boxplot' )
+
+```
+
+d. 
+
+
+```{r, comment=NA, eval=FALSE}
+qplot(data = diamonds, y = price, color = color, geom = 'boxplot' )
+
+```
+
+e. 
+
+
+```{r, comment=NA, eval=FALSE}
+qplot(data = diamonds, y = price, fill = color, geom = 'boxplot' )
+
+```
+
+f. 
+
+```{r, comment=NA, message=FALSE, eval=FALSE}
+qplot( data = diamonds, carat, price, colour=color, geom = "point")
+```
+
+g. 
+
+```{r, comment=NA, message=FALSE, eval=FALSE}
+qplot( data = diamonds, carat, price, colour=color, geom = c("point", "smooth"))
+```
+
+
+    
+    
 
 
 

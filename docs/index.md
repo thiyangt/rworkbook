@@ -1,7 +1,7 @@
 --- 
 title: "Programming and Data Analysis with R"
 author: "Thiyanga S. Talagala"
-date: "2021-07-06"
+date: "2021-08-09"
 site: bookdown::bookdown_site
 documentclass: book
 bibliography: [book.bib, packages.bib]
