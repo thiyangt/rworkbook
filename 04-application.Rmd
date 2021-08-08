@@ -1,6 +1,6 @@
 # Data Visualization with R: qplot
 
-## Lecture Slides
+## Lecture slides
 
 
 ```{r, comment=NA, message=FALSE, echo=FALSE}

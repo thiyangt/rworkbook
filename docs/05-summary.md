@@ -1,7 +1,7 @@
 # Writing Functions in R
 
 
-## Lectures
+## Lecture slides
 
 <iframe src="https://hellor.netlify.app/slides/l52021.html#1" width="672" height="400px"></iframe>
 

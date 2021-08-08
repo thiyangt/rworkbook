@@ -1,7 +1,7 @@
 # Writing Functions in R
 
 
-## Lectures
+## Lecture slides
 
 ```{r, comment=NA, message=FALSE, echo=FALSE}
 knitr::include_url("https://hellor.netlify.app/slides/l52021.html#1")

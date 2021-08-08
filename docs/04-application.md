@@ -1,6 +1,6 @@
 # Data Visualization with R: qplot
 
-## Lecture Slides
+## Lecture slides
 
 
 <iframe src="https://hellor.netlify.app/slides/l42021.html#1" width="672" height="400px"></iframe>
